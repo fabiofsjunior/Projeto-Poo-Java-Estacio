@@ -31,6 +31,8 @@ https://github.com/fabiofsjunior/Projeto-Poo-Java-Estacio
 Drive do Projeto
 https://drive.google.com/drive/folders/1IXviH8dyBEhC-3DKYIe9-6LIbnQOZAed?usp=sharing
 
+Trello
+https://trello.com/b/8KQyjtrz/projeto-poo-java-est%C3%A1cio-2024
 
 
 
