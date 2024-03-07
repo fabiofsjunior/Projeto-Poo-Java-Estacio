@@ -1,0 +1,55 @@
+Atualizado - 06/03/24
+
+POO + JAVA - Ideias de PROJETOS = API's
+
+1. Sistema de Gestão de Doações de Sangue:
+Cadastro de doadores, agendamento de doações e controle de estoque de sangue.
+Maior eficiência na gestão das doações e aumento do número de doadores.
+
+2. Aplicativo de Orientação Nutricional:
+Criação de planos alimentares personalizados e acompanhamento nutricional.
+Promoção da alimentação saudável e prevenção de doenças.
+
+3. Sistema de Gestão de Projetos Sociais "Rede social de ONGS":
+Planejamento, execução e acompanhamento de projetos sociais.
+Maior eficiência e transparência na gestão dos projetos.
+
+4. Sistema de Busca por Empregos: "Com IA que faria um MATCH com o Empregador"
+Vagas de emprego para pessoas em situação de vulnerabilidade social.
+Inclusão social e combate à pobreza.
+
+
+07/03 - Quarta-feira  - Reunião no Meets
+Pauta: 
+1. Definir projeto 
+(1ª Opção: Sistema Único de Doadores) 
+(2ª Opção Sistema de Match de Empregos)
+2. Levantamento de Requisitos e Funcionalidades;
+	a. Cadastro de Doares e Beneficiádos 
+	(Nome, Data Nascimento, Tipo Sangunêo, Endereço, Contato, doador de medula)
+	b. Alerta de necessidade (filtro entre doadores e beneficiários).
+	c. Lista preferêncial (triagem de benefíciarios).
+	d. Checagem de prazo para doação (habilitado para doação)
+	e. Checagem de restrição para doação.
+	f. Listagem dos beneficiários.
+	g. Banco de sangue (listagem do estoque)
+	h. 
+
+3. Distribuir tarefas
+Modelagem do Banco (Isabelle)+Fábio
+Interface/Design Front (Luis Henrique)+Anderson
+Endpoints(Manu)+Ani
+
+4. Estipular prazos de entrega.
+Primeira etapa do projeto (13/03): 
+Modelagem do Banco (Isabelle)+Fábio
+
+Interface/Design Front (Luis Henrique)+Anderson:
+Mockup MOBILE e WEB
+
+Endpoints(Manu)+Ani:
+estudar um pouco de Spring, 
+Dependências, 
+Criação do Ambiente de Desenvolvimento
+
+5. Conectar-se ao projeto (Github, Trello, GoogleDrive)
