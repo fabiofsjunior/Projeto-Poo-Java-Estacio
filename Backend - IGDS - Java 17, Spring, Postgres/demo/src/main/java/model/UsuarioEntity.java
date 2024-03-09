@@ -1,13 +1,12 @@
-package com.example.demo.model;
+package model;
 
-import com.example.demo.services.enumeradores.TipoUsuario;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
-
 import lombok.Builder;
 import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import services.enumeradores.TipoUsuario;
 
 @Entity
 @Data
