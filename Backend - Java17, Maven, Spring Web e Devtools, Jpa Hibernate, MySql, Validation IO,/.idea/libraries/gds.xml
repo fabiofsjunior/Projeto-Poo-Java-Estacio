@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="gds">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/gds.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
