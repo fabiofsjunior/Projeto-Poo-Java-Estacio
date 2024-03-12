@@ -3,14 +3,18 @@ package com.example.demo.model;
 import com.example.demo.service.enumeradores.TipoUsuario;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import lombok.*;
+
+
+
+/*
+ENTIDADE É A REPRESENTAÇÃO ORIENTADA A OBJETO DAS TABELAS DO BANCO DE DADOS
+ */
 
 @Entity
 @Data
 @Getter
+@Builder
 @NoArgsConstructor
 @AllArgsConstructor
 @Table(schema = "public", name = "usuarios")
