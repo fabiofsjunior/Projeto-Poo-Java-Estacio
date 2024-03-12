@@ -2,23 +2,25 @@ package model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
-import lombok.*;
-import services.enumeradores.TipoUsuario;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import service.enumeradores.TipoUsuario;
 
 @Entity
 @Data
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(schema = "public", name = "cartao")
+@Table(schema = "public", name = "usuarios")
 public class UsuarioEntity {
-
     @Id
     @Column(name = "id_usuario")
     @JsonProperty("_id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id_usuario;
-    @Column(name = "nome_completo", length = 255)
+    @Column(name = "nomeCompleto", length = 255)
     private String nomeCompleto;
     @Column(name = "login", length = 255)
     private String login;
@@ -31,6 +33,4 @@ public class UsuarioEntity {
     @Enumerated(EnumType.STRING)
     @Column(name = "tipo_usuario", length = 255)
     private Enum<TipoUsuario> tipo_usuario;
-
-
 }
