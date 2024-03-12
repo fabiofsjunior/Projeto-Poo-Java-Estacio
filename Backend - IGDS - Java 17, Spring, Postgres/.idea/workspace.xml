@@ -5,20 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fffab0ac-4157-44bb-808e-ae9418ad1dbb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/demo/src/main/java/controllers/UsuarioController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Backend - Sangue Amigo/demo/src/main/java/controller/UsuarioController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Backend - Sangue Amigo/demo/src/main/java/model/UsuarioEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Backend - Sangue Amigo/demo/src/main/java/repository/UsuarioRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Backend - Sangue Amigo/demo/src/main/java/service/UsuarioService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Backend - Sangue Amigo/demo/src/main/java/service/enumeradores/TipoUsuario.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Backend - Sangue Amigo/demo/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/compose.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/java/model/UsuarioEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/model/UsuarioEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/java/controllers/UsuarioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/com/example/demo/controllers/UsuarioController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/java/model/UsuarioEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/com/example/demo/model/UsuarioEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/java/repository/UsuarioRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/com/example/demo/repository/UsuarioRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/java/services/enumeradores/TipoUsuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/com/example/demo/enumeradores/TipoUsuario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backend - Sangue Amigo/demo/src/main/java/controller/UsuarioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Backend - Sangue Amigo/demo/src/main/java/com/example/demo/controller/UsuarioController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backend - Sangue Amigo/demo/src/main/java/model/UsuarioEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Backend - Sangue Amigo/demo/src/main/java/com/example/demo/model/UsuarioEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backend - Sangue Amigo/demo/src/main/java/repository/UsuarioRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Backend - Sangue Amigo/demo/src/main/java/com/example/demo/repository/UsuarioRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backend - Sangue Amigo/demo/src/main/java/service/UsuarioService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Backend - Sangue Amigo/demo/src/main/java/com/example/demo/service/UsuarioService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backend - Sangue Amigo/demo/src/main/java/service/enumeradores/TipoUsuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Backend - Sangue Amigo/demo/src/main/java/com/example/demo/service/enumeradores/TipoUsuario.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
