@@ -11,7 +11,7 @@ Overview do Projeto
    03. ANDERSON S
    04. Emanuelle
    05. Ani
-   06. Isabelle 819 97109765
+   06. Isabelle
 5. Design e Modelagem Banco de Dados;
 6. Implementação dos Endpoints e Testes;
 7. Implementação das Funcionalidades e Testes;
