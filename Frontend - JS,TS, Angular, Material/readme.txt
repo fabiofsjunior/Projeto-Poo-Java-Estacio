@@ -26,7 +26,10 @@ https://angular.io/quick-start
 
 https://angular.io/cli
 
+ng add @angular/material
+
 ng serve
+
 
  press r + enter to force reload browser
   press u + enter to show server url
