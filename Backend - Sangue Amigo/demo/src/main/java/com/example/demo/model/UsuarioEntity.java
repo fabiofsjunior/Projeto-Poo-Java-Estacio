@@ -20,7 +20,7 @@ ENTIDADE É A REPRESENTAÇÃO ORIENTADA A OBJETO DAS TABELAS DO BANCO DE DADOS
 @Table(schema = "public", name = "usuarios")
 public class UsuarioEntity {
     @Id
-    @Column(name = "id_usuario")
+    @PrimaryKeyJoinColumn(name = "id_usuario")
     @JsonProperty("_id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id_usuario;
@@ -40,11 +40,13 @@ public class UsuarioEntity {
     private TipoUsuario tipoUsuario;
 
     //Chave Estrangeira, ID_PESSOA_FISICA
-    @OneToOne(
+    /* @OneToOne(
             fetch = FetchType.LAZY,
             cascade = CascadeType.ALL,
-    targetEntity = PessoaFisicaEntity.class)
-    private PessoaFisicaEntity fkIdPessoaFisica;
+    targetEntity = PessoaFisicaEntity.class)*/
+
+   /* @JoinColumn(name = "fkIdPessoaFisica")
+    private PessoaFisicaEntity fkIdPessoaFisica; */
 
 
 

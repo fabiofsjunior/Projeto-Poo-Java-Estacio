@@ -4,7 +4,6 @@ import com.example.demo.model.UsuarioEntity;
 import com.example.demo.service.UsuarioService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import com.example.demo.repository.UsuarioRepository;
 
 import java.util.List;
 
@@ -21,12 +20,12 @@ public class UsuarioController {
     private UsuarioService usuarioService;
 
     @GetMapping("/api/usuario")
-    public List<UsuarioEntity> buscarUsuario(){
+    public List<UsuarioEntity> buscarUsuario() {
         return usuarioService.listarUsuarios();
     }
 
     @PostMapping("/api/usuario")
-    public UsuarioEntity cadastrarUsuario(@RequestBody UsuarioRequest usuarioRequest){
+    public UsuarioEntity cadastrarUsuario(@RequestBody UsuarioRequest usuarioRequest) {
         return usuarioService.addUsuario(usuarioRequest);
     }
 

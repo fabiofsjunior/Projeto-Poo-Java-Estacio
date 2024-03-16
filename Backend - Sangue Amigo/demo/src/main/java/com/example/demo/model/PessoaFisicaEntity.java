@@ -38,9 +38,13 @@ public class PessoaFisicaEntity {
     @Column(name = "grau_prioridade", nullable = false)
     private GrauPrioridade grauPrioridade;
 
-    @OneToOne(targetEntity = UsuarioEntity.class)
-    @JoinColumn(name = "fk_id_usuario")
-    private UsuarioEntity usuario;
+    //@OneToOne(targetEntity = UsuarioEntity.class)
+    // @JoinColumn(name = "fk_id_usuario")
+    @OneToOne(
+            fetch = FetchType.LAZY,
+            cascade = CascadeType.ALL,
+            targetEntity = UsuarioEntity.class)
+    private UsuarioEntity fkPessoaFisica;
 
 
 }
