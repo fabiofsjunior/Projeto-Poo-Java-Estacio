@@ -18,9 +18,9 @@ public class InstituicaoEntity {
     @PrimaryKeyJoinColumn(name = "id_instituicao")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idInstituicao;
-    @Column(name = "numero_cnpj")
+    @Column(name = "numero_cnpj", nullable = false)
     private String cnpj;
-    @Column(name = "nome_fantasia")
+    @Column(name = "nome_fantasia", nullable = false)
     private String nomeFantasia;
 
     @OneToOne(

@@ -1,6 +1,6 @@
 package com.example.demo.service;
 
-import com.example.demo.controller.UsuarioRequest;
+import com.example.demo.controller.request.UsuarioRequest;
 import com.example.demo.model.UsuarioEntity;
 import com.example.demo.repository.UsuarioRepository;
 import com.example.demo.service.enumeradores.TipoUsuario;

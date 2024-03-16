@@ -1,4 +1,4 @@
-package com.example.demo.controller;
+package com.example.demo.controller.request;
 
 import com.example.demo.service.enumeradores.DoadorMedula;
 import com.example.demo.service.enumeradores.FatorSanguineo;
