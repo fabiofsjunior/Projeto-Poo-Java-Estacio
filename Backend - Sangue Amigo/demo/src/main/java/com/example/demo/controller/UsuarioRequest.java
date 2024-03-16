@@ -1,9 +1,5 @@
 package com.example.demo.controller;
 
-import com.example.demo.service.enumeradores.TipoUsuario;
-import jakarta.persistence.Column;
-import jakarta.persistence.EnumType;
-import jakarta.persistence.Enumerated;
 import lombok.*;
 
 @Data
@@ -20,6 +16,8 @@ public class UsuarioRequest {
     private String endereco;
     private String telefone;
     private String tipoUsuario;
+
+
 }
 
 
