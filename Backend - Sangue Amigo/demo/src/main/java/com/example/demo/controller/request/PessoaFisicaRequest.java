@@ -1,5 +1,6 @@
 package com.example.demo.controller.request;
 
+import com.example.demo.model.UsuarioEntity;
 import com.example.demo.service.enumeradores.DoadorMedula;
 import com.example.demo.service.enumeradores.FatorSanguineo;
 import com.example.demo.service.enumeradores.GrauPrioridade;
@@ -16,7 +17,7 @@ public class PessoaFisicaRequest {
 
 
     private Long idPessoaFisica;
-    private Long fkIdUsuario;
+    private UsuarioEntity fkPessoaFisica;
     private String cpf;
     private DateFormat dataNascimento;
     private FatorSanguineo fatorSanguineo;

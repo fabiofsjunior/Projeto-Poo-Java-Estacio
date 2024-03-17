@@ -21,6 +21,7 @@ public class UsuarioController {
     @Autowired
     private UsuarioService usuarioService;
 
+
     @GetMapping("/api/usuario")
     public List<UsuarioEntity> buscarUsuario() {
         return usuarioService.listarUsuarios();
@@ -34,12 +35,13 @@ public class UsuarioController {
 
     @PutMapping("/api/usuario/{id}")
     @ResponseStatus(HttpStatus.OK)
-    public UsuarioEntity alterarUsuario(@PathVariable Long id, @RequestBody UsuarioRequest usuarioRequest){
+    public UsuarioEntity alterarUsuario(@PathVariable Long id, @RequestBody UsuarioRequest usuarioRequest) {
         return usuarioService.alterarUsuario(id, usuarioRequest);
+
     }
 
     @DeleteMapping("/api/usuario/{id}")
-    public String deletarUsuario(@PathVariable Long id){
+    public String deletarUsuario(@PathVariable Long id) {
         usuarioService.deletarUsuario(id);
         return "Usuário deletado com sucesso!";
     }
