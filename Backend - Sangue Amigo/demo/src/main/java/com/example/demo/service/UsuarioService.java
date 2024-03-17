@@ -36,4 +36,8 @@ public class UsuarioService {
         var usuarioCriado = this.usuarioRepository.save(dadosUsuario);
         return (UsuarioEntity) usuarioCriado;
     }
+
+    public void deletarUsuario(Long id) {
+        usuarioRepository.deleteById(id);
+    }
 }
