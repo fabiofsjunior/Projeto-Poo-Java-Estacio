@@ -37,7 +37,21 @@ public class UsuarioService {
         return (UsuarioEntity) usuarioCriado;
     }
 
+    public UsuarioEntity alterarUsuario(Long id, UsuarioRequest usuarioRequest) {
+        var dadosAlteradosUsuario = usuarioRepository.save(UsuarioEntity.builder()
+                .id_usuario(id)
+                .nomeCompleto(usuarioRequest.getNomeCompleto())
+                .login(usuarioRequest.getLogin())
+                .senha(usuarioRequest.getSenha())
+                .endereco(usuarioRequest.getEndereco())
+                .telefone(usuarioRequest.getTelefone())
+                .tipoUsuario(TipoUsuario.valueOf(usuarioRequest.getTipoUsuario()))
+                .build());
+        return dadosAlteradosUsuario;
+    }
+
     public void deletarUsuario(Long id) {
         usuarioRepository.deleteById(id);
     }
+
 }

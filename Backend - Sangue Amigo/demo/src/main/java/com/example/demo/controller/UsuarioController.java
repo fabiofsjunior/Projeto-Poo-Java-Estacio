@@ -31,6 +31,13 @@ public class UsuarioController {
     public UsuarioEntity cadastrarUsuario(@RequestBody UsuarioRequest usuarioRequest) {
         return usuarioService.addUsuario(usuarioRequest);
     }
+
+    @PutMapping("/api/usuario/{id}")
+    @ResponseStatus(HttpStatus.OK)
+    public UsuarioEntity alterarUsuario(@PathVariable Long id, @RequestBody UsuarioRequest usuarioRequest){
+        return usuarioService.alterarUsuario(id, usuarioRequest);
+    }
+
     @DeleteMapping("/api/usuario/{id}")
     public String deletarUsuario(@PathVariable Long id){
         usuarioService.deletarUsuario(id);
