@@ -15,32 +15,32 @@ CAMADA DE INTERCEPTAÇÃO DE DADOS DO FRONT, ENCAMINHADA PARA O PRÓXIMO NÍVEL 
  */
 
 @RestController
-@RequestMapping
+@RequestMapping(value = "/api/usuario")
 @CrossOrigin(origins = "*")
 public class UsuarioController {
     @Autowired
     private UsuarioService usuarioService;
 
 
-    @GetMapping("/api/usuario")
+    @GetMapping
     public List<UsuarioEntity> buscarUsuario() {
         return usuarioService.listarUsuarios();
     }
 
-    @PostMapping("/api/usuario")
+    @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     public UsuarioEntity cadastrarUsuario(@RequestBody UsuarioRequest usuarioRequest) {
         return usuarioService.addUsuario(usuarioRequest);
     }
 
-    @PutMapping("/api/usuario/{id}")
+    @PutMapping("/{id}")
     @ResponseStatus(HttpStatus.OK)
     public UsuarioEntity alterarUsuario(@PathVariable Long id, @RequestBody UsuarioRequest usuarioRequest) {
         return usuarioService.alterarUsuario(id, usuarioRequest);
 
     }
 
-    @DeleteMapping("/api/usuario/{id}")
+    @DeleteMapping("/{id}")
     public String deletarUsuario(@PathVariable Long id) {
         usuarioService.deletarUsuario(id);
         return "Usuário deletado com sucesso!";
