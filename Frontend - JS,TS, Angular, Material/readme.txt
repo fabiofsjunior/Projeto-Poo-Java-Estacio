@@ -1,3 +1,25 @@
+################################################
+	Estrutura de pastas FRONTEND
+//Pastas e Subpastas
+*SangueAmigoApp*
+	> App (Main)
+	> Assets (anexos, imagens, etc)
+	*$> Components:* 
+		>Home-(Index, Login)
+		>Cadastro (Forms)
+		*$>Home-Perfis:*
+			>Usuario
+			>Doador
+			>Instituição
+		*$>Parceiros*
+	*$>Services:*
+		>Formulários(POST/UPDATE/DELETE)
+		>ConsultasNoBanco(GET)
+		>Parceiros(GET)
+
+
+################################################
+
 
 node --version = v20.11.1
 
@@ -36,3 +58,7 @@ ng serve
   press o + enter to open in browser
   press c + enter to clear console
   press q + enter to quit
+
+
+
+

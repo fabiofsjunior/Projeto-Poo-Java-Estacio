@@ -27,11 +27,12 @@ public class PessoaFisicaService {
                 .idPessoaFisica(pessoaFisicaRequest.getIdPessoaFisica())
                 .fkPessoaFisica(pessoaFisicaRequest.getFkPessoaFisica())
                 .cpf(pessoaFisicaRequest.getCpf())
-                .dataNascimento(pessoaFisicaRequest.getDataNascimento())
-                .dataUltimaDoacao(pessoaFisicaRequest.getDataUltimaDoacao())
+                .dataNascimento(pessoaFisicaRequest.getDataNascimento().toString())
                 .fatorSanguineo(pessoaFisicaRequest.getFatorSanguineo())
-                .grauPrioridade(pessoaFisicaRequest.getGrauPrioridade())
-                .restricao(pessoaFisicaRequest.isRestricao()).build();
+                .dataUltimaDoacao(pessoaFisicaRequest.getDataUltimaDoacao().toString())
+                .doadorMedula(pessoaFisicaRequest.getDoadorMedula())
+                .restricao(pessoaFisicaRequest.isRestricao())
+                .grauPrioridade(pessoaFisicaRequest.getGrauPrioridade()).build();
         var pessoaFisicaCriada = this.pessoaFisicaRepository.save(dadosPessoaFisica);
         return(PessoaFisicaEntity) pessoaFisicaCriada;
     }
@@ -41,9 +42,9 @@ public class PessoaFisicaService {
                 .idPessoaFisica(id)
                 .fkPessoaFisica(pessoaFisicaRequest.getFkPessoaFisica())
                 .fatorSanguineo(pessoaFisicaRequest.getFatorSanguineo())
-                .dataNascimento(pessoaFisicaRequest.getDataNascimento())
+                .dataNascimento(pessoaFisicaRequest.getDataNascimento().toString())
                 .cpf(pessoaFisicaRequest.getCpf())
-                .dataUltimaDoacao(pessoaFisicaRequest.getDataUltimaDoacao())
+                .dataUltimaDoacao(pessoaFisicaRequest.getDataUltimaDoacao().toString())
                 .restricao(pessoaFisicaRequest.isRestricao())
                 .fatorSanguineo(pessoaFisicaRequest.getFatorSanguineo())
                 .doadorMedula(pessoaFisicaRequest.getDoadorMedula()).build());
