@@ -22,33 +22,29 @@ public class PessoaFisicaEntity {
     @Column(name = "id_pessoa_fisica", nullable = false)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idPessoaFisica;
-
     @Column(name = "cpf_pessoa_fisica", nullable = false)
     private String cpf;
     @Column(name = "data_nascimento", nullable = false)
-
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy")
     private String dataNascimento;
     @Column(name = "fator_sanguineo", nullable = false)
     private FatorSanguineo fatorSanguineo;
-
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy")
     @Column(name = "data_ultima_doacao", nullable = false)
     private String dataUltimaDoacao;
     @Column(name = "doador_medula", nullable = false)
+    @Enumerated(value = EnumType.STRING)
     private DoadorMedula doadorMedula;
     @Column(name = "restricao", nullable = false)
     private boolean restricao;
     @Column(name = "grau_prioridade", nullable = false)
+    @Enumerated(value = EnumType.STRING)
     private GrauPrioridade grauPrioridade;
 
-    //@OneToOne(targetEntity = UsuarioEntity.class)
-    // @JoinColumn(name = "fk_id_usuario")
-    @OneToOne(
+   /* @OneToOne(
             fetch = FetchType.LAZY,
             cascade = CascadeType.ALL,
-            targetEntity = UsuarioEntity.class)
-    private UsuarioEntity fkPessoaFisica;
+            targetEntity = UsuarioEntity.class)*/
 
 
 }

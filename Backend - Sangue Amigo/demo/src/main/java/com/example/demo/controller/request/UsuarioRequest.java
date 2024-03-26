@@ -1,5 +1,6 @@
 package com.example.demo.controller.request;
 
+import com.example.demo.model.PessoaFisicaEntity;
 import lombok.*;
 
 @Data
@@ -16,6 +17,7 @@ public class UsuarioRequest {
     private String endereco;
     private String telefone;
     private String tipoUsuario;
+    private PessoaFisicaEntity pessoaFisicaEntity;
 
 
 }

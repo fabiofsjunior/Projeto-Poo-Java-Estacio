@@ -24,8 +24,6 @@ public class PessoaFisicaService {
 
     public PessoaFisicaEntity addPessoaFisica(PessoaFisicaRequest pessoaFisicaRequest) {
         var dadosPessoaFisica = PessoaFisicaEntity.builder()
-                .idPessoaFisica(pessoaFisicaRequest.getIdPessoaFisica())
-                .fkPessoaFisica(pessoaFisicaRequest.getFkPessoaFisica())
                 .cpf(pessoaFisicaRequest.getCpf())
                 .dataNascimento(pessoaFisicaRequest.getDataNascimento().toString())
                 .fatorSanguineo(pessoaFisicaRequest.getFatorSanguineo())
@@ -34,13 +32,13 @@ public class PessoaFisicaService {
                 .restricao(pessoaFisicaRequest.isRestricao())
                 .grauPrioridade(pessoaFisicaRequest.getGrauPrioridade()).build();
         var pessoaFisicaCriada = this.pessoaFisicaRepository.save(dadosPessoaFisica);
+
         return(PessoaFisicaEntity) pessoaFisicaCriada;
     }
 
     public PessoaFisicaEntity alterarPessoaFisica(Long id, PessoaFisicaRequest pessoaFisicaRequest) {
         var dadosAlteradosUsuario = pessoaFisicaRepository.save(PessoaFisicaEntity.builder()
                 .idPessoaFisica(id)
-                .fkPessoaFisica(pessoaFisicaRequest.getFkPessoaFisica())
                 .fatorSanguineo(pessoaFisicaRequest.getFatorSanguineo())
                 .dataNascimento(pessoaFisicaRequest.getDataNascimento().toString())
                 .cpf(pessoaFisicaRequest.getCpf())

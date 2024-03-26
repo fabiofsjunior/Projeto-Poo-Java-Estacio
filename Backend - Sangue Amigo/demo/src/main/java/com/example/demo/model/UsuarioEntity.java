@@ -11,20 +11,20 @@ import lombok.*;
 ENTIDADE É A REPRESENTAÇÃO ORIENTADA A OBJETO DAS TABELAS DO BANCO DE DADOS
  */
 
-@Entity
+
 @Data
+@Entity
 @Getter
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(schema = "public", name = "usuarios")
+@Table(schema = "public", name = "usuario")
 public class UsuarioEntity {
     @Id
-    @PrimaryKeyJoinColumn(name = "id_usuario")
+    @Column(name = "id_usuario")
     @JsonProperty("_id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id_usuario;
-
     @Column(name = "nomeCompleto", length = 255, nullable = false)
     private String nomeCompleto;
     @Column(name = "login", length = 255, nullable = false)
@@ -38,8 +38,23 @@ public class UsuarioEntity {
     @Enumerated(EnumType.STRING)
     @Column(name = "tipo_usuario", length = 255, nullable = false)
     private TipoUsuario tipoUsuario;
+    @OneToOne
+    private PessoaFisicaEntity pessoaFisicaEntity;
 
-    //Chave Estrangeira, ID_PESSOA_FISICA
+   /* @OneToOne(
+            fetch = FetchType.LAZY,
+            cascade = CascadeType.ALL,
+            targetEntity = PessoaFisicaEntity.class)*/
+
+    //@PrimaryKeyJoinColumn(name = "fk_pessoa_fisica")
+    /* @OneToOne(
+            fetch = FetchType.LAZY,
+            cascade = CascadeType.ALL,
+            targetEntity = PessoaFisicaEntity.class)*/
+   /*  @PrimaryKeyJoinColumn
+    @OneToOne( targetEntity = PessoaFisicaEntity.class)
+    private String fkPessoaFisica;
+    //Chave Estrangeira, ID_PESSOA_FISICA */
     /* @OneToOne(
             fetch = FetchType.LAZY,
             cascade = CascadeType.ALL,
@@ -47,7 +62,6 @@ public class UsuarioEntity {
 
    /* @JoinColumn(name = "fkIdPessoaFisica")
     private PessoaFisicaEntity fkIdPessoaFisica; */
-
 
 
 }
