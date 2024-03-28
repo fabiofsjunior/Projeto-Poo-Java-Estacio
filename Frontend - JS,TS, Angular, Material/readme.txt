@@ -48,6 +48,8 @@ https://angular.io/quick-start
 
 https://angular.io/cli
 
+ng new sangue-amigo-app --routing
+
 ng add @angular/material
 
 ng serve

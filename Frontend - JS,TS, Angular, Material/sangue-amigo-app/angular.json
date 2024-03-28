@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "sangueAmigoApp": {
+    "sangue-amigo-app": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -30,10 +30,14 @@
               "src/assets"
             ],
             "styles": [
-              "@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [],
+            "server": "src/main.server.ts",
+            "prerender": true,
+            "ssr": {
+              "entry": "server.ts"
+            }
           },
           "configurations": {
             "production": {
@@ -63,10 +67,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "sangueAmigoApp:build:production"
+              "buildTarget": "sangue-amigo-app:build:production"
             },
             "development": {
-              "buildTarget": "sangueAmigoApp:build:development"
+              "buildTarget": "sangue-amigo-app:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -74,7 +78,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "sangueAmigoApp:build"
+            "buildTarget": "sangue-amigo-app:build"
           }
         },
         "test": {
@@ -91,7 +95,6 @@
               "src/assets"
             ],
             "styles": [
-              "@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.scss"
             ],
             "scripts": []
