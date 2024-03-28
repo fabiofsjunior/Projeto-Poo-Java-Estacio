@@ -6,6 +6,7 @@ import { LoginComponent } from './components/login/login.component';
 import { ParceirosComponent } from './components/parceiros/parceiros.component';
 
 export const routes: Routes = [
+
   { path: '', component: HomeComponent }, // Cada Componente deve ser chamado aqui
   { path: 'cadastro', component: CadastroComponent }, // Cada Componente deve ser chamado aqui
   { path: 'login', component: LoginComponent }, // Cada Componente deve ser chamado aqui
