@@ -6,9 +6,8 @@ import { LoginComponent } from './components/login/login.component';
 import { ParceirosComponent } from './components/parceiros/parceiros.component';
 
 export const routes: Routes = [
-
-  { path: '', component: HomeComponent }, // Cada Componente deve ser chamado aqui
-  { path: 'cadastro', component: CadastroComponent }, // Cada Componente deve ser chamado aqui
-  { path: 'login', component: LoginComponent }, // Cada Componente deve ser chamado aqui
-  { path: 'parceiros', component: ParceirosComponent }, // Cada Componente deve ser chamado aqui
+  { path: '', title: 'SangueAmigoApp|Home', component: HomeComponent }, // Cada Componente deve ser chamado aqui
+  { path: 'cadastro', title: 'Cadastro', component: CadastroComponent }, // Cada Componente deve ser chamado aqui
+  { path: 'login', title: 'Login', component: LoginComponent }, // Cada Componente deve ser chamado aqui
+  { path: 'parceiros', title: 'Parceiros', component: ParceirosComponent }, // Cada Componente deve ser chamado aqui
 ];

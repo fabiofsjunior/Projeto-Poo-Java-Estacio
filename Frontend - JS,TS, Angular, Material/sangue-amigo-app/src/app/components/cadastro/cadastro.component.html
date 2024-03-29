@@ -1,1 +1,66 @@
-<p>cadastro works!</p>
+<mat-stepper linear #stepper>
+  <mat-step [stepControl]="firstFormGroup" [editable]="isEditable">
+    <form [formGroup]="firstFormGroup">
+      <ng-template matStepLabel>Perfil do Usuário</ng-template>
+      <mat-form-field>
+        <mat-label>Tipo de Usuário</mat-label>
+        <select matNativeControl required formControlName="firstCtrl">
+          <option value=""></option>
+          <option value="DOADOR">DOADOR</option>
+          <option value="FAVORECIDO">FAVORECIDO</option>
+          <option value="INSTITUICAO">INSTITUIÇÃO</option>
+        </select>
+      </mat-form-field>
+      <!-- INTERVALO -->
+      <div>
+        <button mat-button matStepperNext>Continuar</button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step [stepControl]="secondFormGroup" [editable]="isEditable">
+    <form [formGroup]="secondFormGroup">
+      <ng-template matStepLabel>Dados Pessoais</ng-template>
+      <mat-form-field>
+        <mat-label>CPF</mat-label>
+        <input
+          matInput
+          type="number"
+          formControlName="secondCtrl"
+          placeholder="000.000.000-00"
+          required
+        />
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Data de Nascimento</mat-label>
+        <input matInput formControlName="secondCtrl" type="date" required/>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Tipo de Sanguíneo</mat-label>
+        <select matNativeControl required formControlName="secondCtrl">
+          <option value=""></option>
+          <option value="A_POSITIVO">A+</option>
+          <option value="A_NEGATIVO">A-</option>
+          <option value="B_POSITIVO">B+</option>
+          <option value="B_NEGATIVO">B-</option>
+          <option value="AB_POSITIVO">AB+</option>
+          <option value="AB_NEGATIVO">AB-</option>
+          <option value="O_POSITIVO">O+</option>
+          <option value="O_NEGATIVO">O-</option>
+        </select>
+      </mat-form-field>
+      <div>
+        <button mat-button matStepperPrevious>Voltar</button>
+        <button mat-button matStepperNext>Continuar</button>
+      </div>
+    </form>
+  </mat-step>
+  <!-- INTERVALO -->
+  <mat-step>
+    <ng-template matStepLabel>Concluido</ng-template>
+    <p>Confirme para concluir o cadastro</p>
+    <div>
+      <button mat-button matStepperPrevious>Back</button>
+      <button mat-button>Confirmar</button>
+    </div>
+  </mat-step>
+</mat-stepper>
