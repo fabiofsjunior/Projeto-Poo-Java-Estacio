@@ -9,10 +9,9 @@ Overview do Projeto
    01. FÁBIO F S JR.
    02. LUÍS H.
    03. ANDERSON S
-   04. EMANUELLE
-   05. ANI
-   06. ISABELLE
-   07. MARCELO
+   04. Emanuelle
+   05. Ani
+   06. Isabelle
 5. Design e Modelagem Banco de Dados;
 6. Implementação dos Endpoints e Testes;
 7. Implementação das Funcionalidades e Testes;
