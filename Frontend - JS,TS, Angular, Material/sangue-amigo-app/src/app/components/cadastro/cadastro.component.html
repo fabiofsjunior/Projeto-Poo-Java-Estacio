@@ -24,6 +24,7 @@
         <mat-label>CPF</mat-label>
         <input
           matInput
+
           type="number"
           formControlName="secondCtrl"
           placeholder="000.000.000-00"
@@ -32,8 +33,14 @@
       </mat-form-field>
       <mat-form-field>
         <mat-label>Data de Nascimento</mat-label>
-        <input matInput formControlName="secondCtrl" type="date" required/>
+        <input matInput formControlName="secondCtrl" type="date" required />
       </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Data da Ultima Doação</mat-label>
+        <input matInput formControlName="secondCtrl" type="date" required />
+      </mat-form-field>
+
       <mat-form-field>
         <mat-label>Tipo de Sanguíneo</mat-label>
         <select matNativeControl required formControlName="secondCtrl">
@@ -48,6 +55,77 @@
           <option value="O_NEGATIVO">O-</option>
         </select>
       </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Doador de Medula Óssea?</mat-label>
+        <select matNativeControl required formControlName="secondCtrl">
+          <option value=""></option>
+          <option value="NAO_DOADOR_MEDULA">NÃO</option>
+          <option value="DOADOR_MEDULA">SIM</option>
+        </select>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Grau de Prioridade</mat-label>
+        <select matNativeControl required formControlName="secondCtrl">
+          <option value=""></option>
+          <option value="BAIXA">BAIXA</option>
+          <option value="MEDIA">MEDIA</option>
+          <option value="ALTA">ALTA</option>
+        </select>
+      </mat-form-field>
+
+      <div>
+        <button mat-button matStepperPrevious>Voltar</button>
+        <button mat-button matStepperNext>Continuar</button>
+      </div>
+    </form>
+  </mat-step>
+  <!-- INTERVALO -->
+  <mat-step [stepControl]="thirdFormGroup" [editable]="isEditable">
+    <form [formGroup]="thirdFormGroup">
+      <ng-template matStepLabel>Dados Pessoais</ng-template>
+      <mat-form-field>
+        <mat-label>Nome Completo</mat-label>
+        <input
+          matInput
+          type="text"
+          formControlName="thirdCtrl"
+          placeholder="Nome Completo"
+          required
+        />
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Login</mat-label>
+        <input
+          matInput
+          type="text"
+          formControlName="thirdCtrl"
+          placeholder="Login"
+          required
+        />
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Password</mat-label>
+        <input
+          matInput
+          type="password"
+          formControlName="thirdCtrl"
+          placeholder="Password"
+          required
+        />
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Telefone</mat-label>
+        <input
+          matInput
+          type="number"
+          formControlName="thirdCtrl"
+          placeholder="(81)9 9999-9999"
+          required
+        />
+      </mat-form-field>
+
       <div>
         <button mat-button matStepperPrevious>Voltar</button>
         <button mat-button matStepperNext>Continuar</button>
