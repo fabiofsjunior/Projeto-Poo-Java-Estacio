@@ -63,4 +63,19 @@ ng serve
 
 
 
+#######################
+ENDPOINTS
+
+URL PADRÃO http://localhost:8080/api
+
+POST/GET
+http://localhost:8080/api/usuario
+http://localhost:8080/api/pessoafisica
+http://localhost:8080/api/instituicao
+
+UPDATE/DELETE
+ENDPOINT PARA UPDATE = http://localhost:8080/api/usuario/{id}
+
+
+
 
