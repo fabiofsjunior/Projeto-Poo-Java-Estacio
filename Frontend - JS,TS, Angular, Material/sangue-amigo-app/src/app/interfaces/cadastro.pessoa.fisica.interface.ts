@@ -1,4 +1,4 @@
-interface CadastroPessoaFisica{
+interface CadastroPessoaFisica {
   cpf: string;
   dataNascimento: string;
   fatorSanguineo: string;

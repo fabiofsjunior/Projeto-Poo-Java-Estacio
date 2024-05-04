@@ -61,13 +61,14 @@ export class CadastroComponent {
   //      prioridade: new FormControl('', [Validators.required]),
   //    });
   //  }
-  constructor(private cadastro: CadastroService, private _formBuilder: FormBuilder) { }
+  constructor(//private cadastro: CadastroService,
+    private _formBuilder: FormBuilder) { }
 
   sendDados(){
-    if (!this.firstFormGroup || !this.secondFormGroup || !this.thirdFormGroup)
-      return;
+    ///if (!this.firstFormGroup || !this.secondFormGroup || !this.thirdFormGroup)
+     // return;
 
-    this.CadastroService.sendDados({})
+    //this.CadastroService.sendDados({})
 
 
     //const secondFormGroup: CadastroPessoaFisica ={
@@ -80,7 +81,7 @@ export class CadastroComponent {
     //grauPrioridade: (''),
     //}
      //console.log('To aqui', environment.api);
-     //console.log(this.secondFormGroup);
+     console.log(this.secondFormGroup);
 
   }
 

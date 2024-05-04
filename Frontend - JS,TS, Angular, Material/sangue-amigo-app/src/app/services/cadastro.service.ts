@@ -12,11 +12,11 @@ export class CadastroService {
 
 constructor(private httpclient:HttpClient) { }
 }
- sendDados(secondFormGroup: CadastroPessoaFisica){
+ //sendDados(secondFormGroup: CadastroPessoaFisica){
    //const dados: CadastroPessoaFisica = { cpf, dataNascimento, fatorSanguineo, dataUltimaDoacao, doadorMedula, restricao, grauPrioridade };
 
-  return this.httpclient.post<CadastroPessoaFisica>(this.url, secondFormGroup);
-}
+ // return this.httpclient.post<CadastroPessoaFisica>(this.url, secondFormGroup);
+//}
 
 
 //Observable<CadastroPessoaFisica>
