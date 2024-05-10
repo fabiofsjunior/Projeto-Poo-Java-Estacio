@@ -1,0 +1,50 @@
+{
+  "cadastro": [
+    {
+      "cpf": " ",
+      "dataNascimento": " ",
+      "fatorSanguineo": " ",
+      "dataUltimaDoacao": " ",
+      "doadorMedula": " ",
+      "grauPrioridade": " ",
+      "id": "1ff7"
+    },
+    {
+      "id": "ee08",
+      "secondFormGroup": {
+        "cpf": 123146546,
+        "dataNascimento": "54654-06-04",
+        "fatorSanguineo": "A_POSITIVO",
+        "dataUltimaDoacao": "0046-06-04",
+        "doadorMedula": "NAO_DOADOR_MEDULA",
+        "grauPrioridade": "BAIXA"
+      }
+    },
+    {
+      "id": "c5e3",
+      "thirdFormGroup": {
+        "nome": "Luis ",
+        "login": "Henrique",
+        "senha": "1231465",
+        "telefone": 81983776650
+      }
+    },
+    {
+      "id": "1c77",
+      "thirdFormGroup": {
+        "nome": "Luis",
+        "login": "Henrique",
+        "senha": "12315464",
+        "telefone": 546465
+      },
+      "secondFormGroup": {
+        "cpf": 123465789,
+        "dataNascimento": "5445-06-04",
+        "fatorSanguineo": "A_NEGATIVO",
+        "dataUltimaDoacao": "6544-04-05",
+        "doadorMedula": "NAO_DOADOR_MEDULA",
+        "grauPrioridade": "ALTA"
+      }
+    }
+  ]
+}

@@ -7,7 +7,11 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatStepperModule } from '@angular/material/stepper';
 import { environment } from '../../../environments/environment';
-import {CadastroService} from '../../services/cadastro.service';
+import { CadastroService } from '../../services/cadastro.service';
+import { CadastroPessoaFisica } from '../../interfaces/cadastro.pessoa.fisica.interface';
+import { Observable } from 'rxjs';
+import { Usuario } from '../../interfaces/cadastro.usuario.interface';
+
 
 @Component({
   selector: 'app-cadastro',
@@ -23,7 +27,7 @@ import {CadastroService} from '../../services/cadastro.service';
     HttpClientModule,
     FormsModule,
   ],
-  //providers:[CadastroService],
+  providers:[CadastroService],
   templateUrl: './cadastro.component.html',
   styleUrl: './cadastro.component.scss',
 })
@@ -33,59 +37,50 @@ export class CadastroComponent {
     usuario: ['', Validators.required],
   });
   secondFormGroup = this._formBuilder.group({
-    cpf: ['',Validators.required],
-    dataNasc: ['',Validators.required],
-    dataDoa: ['',Validators.required],
-    sangue: ['',Validators.required],
-    medula: ['',Validators.required],
-    prioridade: ['',Validators.required],
+    cpf: ['', Validators.required],
+    dataNascimento: ['', Validators.required],
+    fatorSanguineo: ['', Validators.required],
+    dataUltimaDoacao: ['', Validators.required],
+    doadorMedula: ['', Validators.required],
+    grauPrioridade: ['', Validators.required],
   });
   thirdFormGroup = this._formBuilder.group({
     nome: ['', Validators.required],
-    login: ['',Validators.required],
-    senha: ['',Validators.required],
-    telefone: ['',Validators.required],
+    login: ['', Validators.required],
+    senha: ['', Validators.required],
+    telefone: ['', Validators.required],
 
   });
   isEditable = true;
 
-  // newsRegisterForms!: FormGroup;
-
-  // constructor() {
-  //    this.newsRegisterForms = new FormGroup({
-  //      cpf: new FormControl('', [Validators.required]),
-  //      dataNasc: new FormControl('', [Validators.required]),
-  //      dataDoa: new FormControl('', [Validators.required]),
-  //      sangue: new FormControl('', [Validators.required]),
-  //      medula: new FormControl('', [Validators.required]),
-  //      prioridade: new FormControl('', [Validators.required]),
-  //    });
-  //  }
-  constructor(//private cadastro: CadastroService,
-    private _formBuilder: FormBuilder) { }
-
-  sendDados(){
-    ///if (!this.firstFormGroup || !this.secondFormGroup || !this.thirdFormGroup)
-     // return;
-
-    //this.CadastroService.sendDados({})
-
-
-    //const secondFormGroup: CadastroPessoaFisica ={
-    //cpf: (''),
-    //dataNascimento: (''),
-    //fatorSanguineo: (''),
-    //dataUltimaDoacao: (''),
-    //doadorMedula: (''),
-    //restricao: (''),
-    //grauPrioridade: (''),
-    //}
-     //console.log('To aqui', environment.api);
-     console.log(this.secondFormGroup);
+  //cadastro: CadastroPessoaFisica[] = []
+  //cadastro$ = new Observable<CadastroPessoaFisica[]>();
+  cadastro$ = new Observable<Usuario[]>();
+  constructor(private cadastroService: CadastroService,
+    private _formBuilder: FormBuilder) {
 
   }
 
-  //this.CadastroService.sendDados(secondFormGroup)
-    //.then(CadastroPessoaFisica = console.log("adicionado"));
-    //.cath(error = console.error(error));
+  sendDados() {
+    //if (!this.firstFormGroup || !this.secondFormGroup || !this.thirdFormGroup)
+      //return;
+    //this.cadastroService.enviarDados()
+    //.subscribe(cadastro => this.cadastro = cadastro) "pode ficar vivo na memoria"
+    //secondFormGroup: this.secondFormGroup
+   //this.cadastroService.enviarDados({ secondFormGroup : this.secondFormGroup.value})
+    //.subscribe()
+
+    //const formValues = this.secondFormGroup.value;
+
+    this.cadastroService.enviarDados({ thirdFormGroup : this.thirdFormGroup.value , secondFormGroup : this.secondFormGroup.value})
+     .subscribe()
+
+
+
+
+    console.log(this.thirdFormGroup.value);
+    console.log('To aqui', environment.api);
+
+
+}
 }

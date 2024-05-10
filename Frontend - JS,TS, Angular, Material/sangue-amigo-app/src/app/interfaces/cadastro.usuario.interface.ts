@@ -1,9 +1,13 @@
-interface Usuario{
-  nomeCompleto: string;
-  login: string;
-  senha: string;
-  endereco: string;
-  telefone: string;
-  tipoUsuario: string;
-  pessoaFisicaEntity: CadastroPessoaFisica;
+export interface Usuario{
+  thirdFormGroup : Partial<{
+  nomeCompleto: string| null;
+  login: string| null;
+  senha: string| null;
+  endereco: string| null;
+  telefone: string| null;
+  firstFormGroup : Partial<{
+  tipoUsuario: string| null;
+  }>
+  //pessoaFisicaEntity: 'CadastroPessoaFisica';
+}>
 }

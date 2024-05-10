@@ -33,17 +33,17 @@
       </mat-form-field>
       <mat-form-field>
         <mat-label>Data de Nascimento</mat-label>
-        <input matInput formControlName="dataNasc" type="date" required />
+        <input matInput formControlName="dataNascimento" type="date" required />
       </mat-form-field>
 
       <mat-form-field>
         <mat-label>Data da Ultima Doação</mat-label>
-        <input matInput formControlName="dataDoa" type="date" required />
+        <input matInput formControlName="dataUltimaDoacao" type="date" required />
       </mat-form-field>
 
       <mat-form-field>
         <mat-label>Tipo de Sanguíneo</mat-label>
-        <select matNativeControl required formControlName="sangue">
+        <select matNativeControl required formControlName="fatorSanguineo">
           <option value=""></option>
           <option value="A_POSITIVO">A+</option>
           <option value="A_NEGATIVO">A-</option>
@@ -58,7 +58,7 @@
 
       <mat-form-field>
         <mat-label>Doador de Medula Óssea?</mat-label>
-        <select matNativeControl required formControlName="medula">
+        <select matNativeControl required formControlName="doadorMedula">
           <option value=""></option>
           <option value="NAO_DOADOR_MEDULA">NÃO</option>
           <option value="DOADOR_MEDULA">SIM</option>
@@ -67,7 +67,7 @@
 
       <mat-form-field>
         <mat-label>Grau de Prioridade</mat-label>
-        <select  matNativeControl required formControlName="prioridade">
+        <select  matNativeControl required formControlName="grauPrioridade">
           <option value=""></option>
           <option value="BAIXA">BAIXA</option>
           <option value="MEDIA">MEDIA</option>
@@ -77,7 +77,7 @@
 
       <div>
         <button mat-button matStepperPrevious>Voltar</button>
-        <button  (click)="sendDados()" mat-button matStepperNext>Continuar</button>
+        <button  mat-button matStepperNext>Continuar</button>
       </div>
     </form>
   </mat-step>
@@ -128,7 +128,7 @@
 
       <div>
         <button mat-button matStepperPrevious>Voltar</button>
-        <button  mat-button matStepperNext>Continuar</button>
+        <button (click)="sendDados()" mat-button matStepperNext>Continuar</button>
       </div>
     </form>
   </mat-step>
