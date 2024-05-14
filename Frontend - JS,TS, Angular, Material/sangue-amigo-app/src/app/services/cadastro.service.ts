@@ -14,12 +14,12 @@ export class CadastroService {
 
 constructor(private httpclient:HttpClient) { }
 
-//enviarDados(cadastro: CadastroPessoaFisica){
-  //return this.httpclient.post<CadastroPessoaFisica>(this.url, cadastro);
- //}
- enviarDados(cadastro:Usuario | CadastroPessoaFisica){
+confirmarInfo(){
+  
+}
+enviarDados(cadastro:Usuario | CadastroPessoaFisica){
   return this.httpclient.post<Usuario | CadastroPessoaFisica>(this.url, cadastro);
- }
+}
 
 }
 

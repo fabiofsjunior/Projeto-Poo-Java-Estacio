@@ -32,6 +32,14 @@ import { Usuario } from '../../interfaces/cadastro.usuario.interface';
   styleUrl: './cadastro.component.scss',
 })
 export class CadastroComponent {
+  nome: string = '';
+  cpf: string = '';
+  dataN: string = '';
+  dataD: string = '';
+  fatorS: string = '';
+  medula: string = '';
+  telefone: string = '';
+
 
   firstFormGroup = this._formBuilder.group({
     usuario: ['', Validators.required],

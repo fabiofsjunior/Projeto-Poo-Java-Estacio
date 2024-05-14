@@ -22,28 +22,21 @@
       <ng-template matStepLabel>Dados Pessoais</ng-template>
       <mat-form-field>
         <mat-label>CPF</mat-label>
-        <input
-          matInput
-
-          type="number"
-          formControlName="cpf"
-          placeholder="000.000.000-00"
-          required
-        />
+        <input matInput type="number" formControlName="cpf" placeholder="000.000.000-00" required  [(ngModel)]="cpf"/>
       </mat-form-field>
       <mat-form-field>
         <mat-label>Data de Nascimento</mat-label>
-        <input matInput formControlName="dataNascimento" type="date" required />
+        <input matInput formControlName="dataNascimento" type="date" required [(ngModel)]="dataN"/>
       </mat-form-field>
 
       <mat-form-field>
         <mat-label>Data da Ultima Doação</mat-label>
-        <input matInput formControlName="dataUltimaDoacao" type="date" required />
+        <input matInput formControlName="dataUltimaDoacao" type="date" required [(ngModel)]="dataD"/>
       </mat-form-field>
 
       <mat-form-field>
         <mat-label>Tipo de Sanguíneo</mat-label>
-        <select matNativeControl required formControlName="fatorSanguineo">
+        <select matNativeControl required formControlName="fatorSanguineo" [(ngModel)]="fatorS">
           <option value=""></option>
           <option value="A_POSITIVO">A+</option>
           <option value="A_NEGATIVO">A-</option>
@@ -58,7 +51,7 @@
 
       <mat-form-field>
         <mat-label>Doador de Medula Óssea?</mat-label>
-        <select matNativeControl required formControlName="doadorMedula">
+        <select matNativeControl required formControlName="doadorMedula"[(ngModel)]="medula">
           <option value=""></option>
           <option value="NAO_DOADOR_MEDULA">NÃO</option>
           <option value="DOADOR_MEDULA">SIM</option>
@@ -67,7 +60,7 @@
 
       <mat-form-field>
         <mat-label>Grau de Prioridade</mat-label>
-        <select  matNativeControl required formControlName="grauPrioridade">
+        <select matNativeControl required formControlName="grauPrioridade">
           <option value=""></option>
           <option value="BAIXA">BAIXA</option>
           <option value="MEDIA">MEDIA</option>
@@ -77,7 +70,7 @@
 
       <div>
         <button mat-button matStepperPrevious>Voltar</button>
-        <button  mat-button matStepperNext>Continuar</button>
+        <button mat-button matStepperNext>Continuar</button>
       </div>
     </form>
   </mat-step>
@@ -87,58 +80,51 @@
       <ng-template matStepLabel>Dados Pessoais</ng-template>
       <mat-form-field>
         <mat-label>Nome Completo</mat-label>
-        <input
-          matInput
-          type="text"
-          formControlName="nome"
-          placeholder="Nome Completo"
-          required
-        />
+        <input matInput type="text" formControlName="nome" placeholder="Nome Completo" required [(ngModel)]="nome"/>
       </mat-form-field>
       <mat-form-field>
         <mat-label>Login</mat-label>
-        <input
-          matInput
-          type="text"
-          formControlName="login"
-          placeholder="Login"
-          required
-        />
+        <input matInput type="text" formControlName="login" placeholder="Login" required />
       </mat-form-field>
       <mat-form-field>
         <mat-label>Password</mat-label>
-        <input
-          matInput
-          type="password"
-          formControlName="senha"
-          placeholder="Password"
-          required
-        />
+        <input matInput type="password" formControlName="senha" placeholder="Password" required />
       </mat-form-field>
       <mat-form-field>
         <mat-label>Telefone</mat-label>
-        <input
-          matInput
-          type="number"
-          formControlName="telefone"
-          placeholder="(81)9 9999-9999"
-          required
-        />
+        <input matInput type="number" formControlName="telefone" placeholder="(81)9 9999-9999" required [(ngModel)]="telefone" />
       </mat-form-field>
 
       <div>
         <button mat-button matStepperPrevious>Voltar</button>
-        <button (click)="sendDados()" mat-button matStepperNext>Continuar</button>
+        <button mat-button matStepperNext>Continuar</button>
       </div>
     </form>
   </mat-step>
   <!-- INTERVALO -->
-  <mat-step>
+  <mat-step id="info">
     <ng-template matStepLabel>Concluido</ng-template>
-    <p>Confirme para concluir o cadastro</p>
+    <h3>Nome</h3>
+    <p id="inf">{{nome}}</p>
+    <h3>Cpf</h3>
+    <p id="inf">{{cpf}}</p>
+    <h3>Data de nascimento</h3>
+    <p id="inf">{{dataN}}</p>
+    <h3>Data da ultima doação</h3>
+    <p id="inf">{{dataD}}</p>
+    <h3>Fator sanguineo</h3>
+    <p id="inf">{{fatorS}}</p>
+    <h3>Doador de medula?</h3>
+    <p id="inf">{{medula}}</p>
+    <h3>Telefone</h3>
+    <p id="inf">{{telefone}}</p>
+    <h3>Email</h3>
+    <p id="inf"></p>
+
+    <p id="text">Confirme para concluir o cadastro</p>
     <div>
-      <button mat-button matStepperPrevious>Back</button>
-      <button mat-button>Confirmar</button>
+      <button id="alinhar" mat-button matStepperPrevious>Back</button>
+      <button id="alinhar" (click)="sendDados()">Confirmar</button>
     </div>
   </mat-step>
 </mat-stepper>
