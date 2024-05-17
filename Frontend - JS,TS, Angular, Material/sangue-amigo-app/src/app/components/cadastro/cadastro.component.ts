@@ -11,6 +11,7 @@ import { CadastroService } from '../../services/cadastro.service';
 import { CadastroPessoaFisica } from '../../interfaces/cadastro.pessoa.fisica.interface';
 import { Observable } from 'rxjs';
 import { Usuario } from '../../interfaces/cadastro.usuario.interface';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 
 
 @Component({
@@ -26,6 +27,8 @@ import { Usuario } from '../../interfaces/cadastro.usuario.interface';
     MatDatepickerModule,
     HttpClientModule,
     FormsModule,
+    RouterLink,
+    RouterLinkActive
   ],
   providers:[CadastroService],
   templateUrl: './cadastro.component.html',
