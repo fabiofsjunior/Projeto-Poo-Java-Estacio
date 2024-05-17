@@ -10,12 +10,12 @@ import { Usuario } from '../interfaces/cadastro.usuario.interface';
 })
 export class CadastroService {
 
-   private url = `${environment.api}/cadastro`;
+   private url = `${environment.api}`;
 
 constructor(private httpclient:HttpClient) { }
 
 confirmarInfo(){
-  
+
 }
 enviarDados(cadastro:Usuario | CadastroPessoaFisica){
   return this.httpclient.post<Usuario | CadastroPessoaFisica>(this.url, cadastro);

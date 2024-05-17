@@ -65,7 +65,7 @@ export class CadastroComponent {
   thirdFormGroup = this._formBuilder.group({
     nome: ['', Validators.required],
     login: ['', Validators.required],
-    senha: ['', Validators.required, Validators.minLength(8)],
+    senha: ['', Validators.required],
     telefone: ['', Validators.required],
 
 

@@ -14,6 +14,6 @@ CAMADA DE BAIXO NÍVEL QUE INTERAGE COM O BANCO E PERSISTE OS DADOS
 
 @Repository
 public interface UsuarioRepository extends JpaRepository<UsuarioEntity, Long> {
-    Optional<UsuarioEntity> findByEmail(String email);
+
 
 }

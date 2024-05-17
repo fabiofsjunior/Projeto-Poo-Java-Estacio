@@ -23,7 +23,7 @@ public class UsuarioEntity {
     @Id
     @Column(name = "id_usuario")
     @JsonProperty("_id")
-    @GeneratedValue(strategy = GenerationType.UUID)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id_usuario;
     @Column(name = "nomeCompleto", length = 255, nullable = false)
     private String nomeCompleto;
