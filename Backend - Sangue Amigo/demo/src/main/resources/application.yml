@@ -10,3 +10,8 @@ spring:
     username: root
     password: root
     driverClassName: org.postgresql.Driver
+
+api:
+  security:
+    token:
+      secret: my-secret-key-from-video
