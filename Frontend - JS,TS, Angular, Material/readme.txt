@@ -1,3 +1,5 @@
+Testando 17/05 - 12:25
+
 ################################################
 	Estrutura de pastas FRONTEND
 //Pastas e Subpastas
@@ -60,6 +62,28 @@ ng serve
   press o + enter to open in browser
   press c + enter to clear console
   press q + enter to quit
+
+
+#######################
+
+<!-- Importação do TAILWIND-->
+<script src="https://cdn.tailwindcss.com"></script>
+
+#######################
+ENDPOINTS
+
+URL PADRÃO http://localhost:8080/api
+
+POST/GET
+http://localhost:8080/api/usuario
+http://localhost:8080/api/pessoafisica
+http://localhost:8080/api/instituicao
+
+UPDATE/DELETE
+ENDPOINT PARA UPDATE = http://localhost:8080/api/usuario/{id}
+http://localhost:8080/api/pessoafisica/{id}
+http://localhost:8080/api/instituicao/{id}
+
 
 
 
