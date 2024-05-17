@@ -58,14 +58,13 @@ export class CadastroComponent {
   thirdFormGroup = this._formBuilder.group({
     nome: ['', Validators.required],
     login: ['', Validators.required],
-    senha: ['', Validators.required],
+    senha: ['', Validators.required, Validators.minLength(8)],
     telefone: ['', Validators.required],
 
   });
   isEditable = true;
 
-  //cadastro: CadastroPessoaFisica[] = []
-  //cadastro$ = new Observable<CadastroPessoaFisica[]>();
+
   cadastro$ = new Observable<Usuario[]>();
   constructor(private cadastroService: CadastroService,
     private _formBuilder: FormBuilder) {
@@ -73,25 +72,8 @@ export class CadastroComponent {
   }
 
   sendDados() {
-    //if (!this.firstFormGroup || !this.secondFormGroup || !this.thirdFormGroup)
-      //return;
-    //this.cadastroService.enviarDados()
-    //.subscribe(cadastro => this.cadastro = cadastro) "pode ficar vivo na memoria"
-    //secondFormGroup: this.secondFormGroup
-   //this.cadastroService.enviarDados({ secondFormGroup : this.secondFormGroup.value})
-    //.subscribe()
-
-    //const formValues = this.secondFormGroup.value;
-
     this.cadastroService.enviarDados({ thirdFormGroup : this.thirdFormGroup.value , secondFormGroup : this.secondFormGroup.value})
      .subscribe()
-
-
-
-
-    console.log(this.thirdFormGroup.value);
-    console.log('To aqui', environment.api);
-
 
 }
 }

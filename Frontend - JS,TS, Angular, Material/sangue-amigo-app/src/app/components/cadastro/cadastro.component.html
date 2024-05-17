@@ -123,8 +123,10 @@
 
     <p id="text">Confirme para concluir o cadastro</p>
     <div>
-      <button id="alinhar" mat-button matStepperPrevious>Back</button>
-      <button id="alinhar" (click)="sendDados()" routerLink="/login" routerLinkActive="Active" >Confirmar</button>
+      <button id="alinhar" mat-button matStepperPrevious>Voltar</button>
+      <button id="alinhar" (click)="sendDados()"
+      routerLink="/login" routerLinkActive="Active"
+      mat-button matStepperPrevious>Confirmar</button>
     </div>
   </mat-step>
 </mat-stepper>

@@ -5,7 +5,9 @@ form {
   display: flex;
   flex-direction: column;
   max-width: fit-content;
-  padding-left: 40vw;
+  margin-top: 10px;
+  margin-inline: auto;
+  //padding-left: 40vw;
 }
 
 @media screen and (max-width: 400px) {
@@ -13,7 +15,8 @@ form {
     display: flex;
     flex-direction: column;
     max-width: fit-content;
-    padding-left: 10vw;
+    margin-inline: auto;
+    //padding-left: 10vw;
   }
 }
 @media screen and (max-width: 800px) {
@@ -21,7 +24,8 @@ form {
     display: flex;
     flex-direction: column;
     max-width: fit-content;
-    padding-left: 30vw;
+    margin-inline: auto;
+    //padding-left: 23vw;
   }
 }
 h3{
@@ -31,6 +35,7 @@ h3{
   color: #8E8E8E;
 }
 #inf{
+  font-family: Roboto, "Helvetica Neue", sans-serif;
   margin-top: 0;
   margin-inline: auto;
   text-align: center;
@@ -40,13 +45,15 @@ h3{
   background-color: #E5E5E5;
 }
 #text{
+  font-size: 20px;
+  margin-top: 10px;
   text-align: center;
   margin-inline: auto;
 }
 #alinhar{
-  margin-inline: auto;
   display: flex;
-  justify-content: center;
+  margin-inline: auto;
+  margin-top: 20px;
 }
 
 
