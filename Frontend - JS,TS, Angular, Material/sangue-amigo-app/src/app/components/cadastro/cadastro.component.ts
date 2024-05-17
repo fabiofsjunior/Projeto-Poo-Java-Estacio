@@ -1,17 +1,21 @@
+
 import { HttpClientModule } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { FormBuilder, FormControl, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
+
 import { MatButtonModule } from '@angular/material/button';
 import { MatCalendarCellClassFunction, MatDatepickerModule } from '@angular/material/datepicker';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatStepperModule } from '@angular/material/stepper';
+
 import { environment } from '../../../environments/environment';
 import { CadastroService } from '../../services/cadastro.service';
 import { CadastroPessoaFisica } from '../../interfaces/cadastro.pessoa.fisica.interface';
 import { Observable } from 'rxjs';
 import { Usuario } from '../../interfaces/cadastro.usuario.interface';
 import { RouterLink, RouterLinkActive } from '@angular/router';
+
 
 
 @Component({
@@ -25,16 +29,19 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
     MatFormFieldModule,
     MatInputModule,
     MatDatepickerModule,
+
     HttpClientModule,
     FormsModule,
     RouterLink,
     RouterLinkActive
   ],
   providers:[CadastroService],
+
   templateUrl: './cadastro.component.html',
   styleUrl: './cadastro.component.scss',
 })
 export class CadastroComponent {
+
   nome: string = '';
   cpf: string = '';
   dataN: string = '';
@@ -61,8 +68,10 @@ export class CadastroComponent {
     senha: ['', Validators.required, Validators.minLength(8)],
     telefone: ['', Validators.required],
 
+
   });
   isEditable = true;
+
 
 
   cadastro$ = new Observable<Usuario[]>();
@@ -76,4 +85,5 @@ export class CadastroComponent {
      .subscribe()
 
 }
+
 }

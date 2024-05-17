@@ -1,13 +1,17 @@
+
 mat-form-field{
   width: 300px;
 }
+
 form {
   display: flex;
   flex-direction: column;
   max-width: fit-content;
+
   margin-top: 10px;
   margin-inline: auto;
   //padding-left: 40vw;
+
 }
 
 @media screen and (max-width: 400px) {
@@ -15,8 +19,10 @@ form {
     display: flex;
     flex-direction: column;
     max-width: fit-content;
+
     margin-inline: auto;
     //padding-left: 10vw;
+
   }
 }
 @media screen and (max-width: 800px) {
@@ -24,6 +30,7 @@ form {
     display: flex;
     flex-direction: column;
     max-width: fit-content;
+
     margin-inline: auto;
     //padding-left: 23vw;
   }
